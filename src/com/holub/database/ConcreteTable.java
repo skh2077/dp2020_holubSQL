@@ -568,6 +568,9 @@ import com.holub.tools.ArrayIterator;
 			while (column.hasNext())
 				columnNames[i++] = column.next().toString();
 		}
+		else {
+			columnNames = this.columnNames.clone(); // clone all of table column
+		}
 
 		if (other != null)
 			otherTables = (Table[]) other.toArray(new Table[other.size()]);
