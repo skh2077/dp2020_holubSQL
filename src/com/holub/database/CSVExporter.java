@@ -83,7 +83,6 @@ public class CSVExporter implements Table.Exporter
 	{	int i = width;
 		while( data.hasNext() )
 		{	Object datum = data.next();
-
 			// Null columns are represented by an empty field
 			// (two commas in a row). There's nothing to write
 			// if the column data is null.

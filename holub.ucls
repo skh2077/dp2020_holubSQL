@@ -1,746 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="com.holub.database.Database.LikeExpression" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="218" x="3159" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="2" language="java" name="com.holub.database.Database.Expression" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="144" x="3615" y="1713"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <interface id="3" language="java" name="com.holub.database.Table.Exporter" project="foo" 
-    file="/foo/src/com/holub/database/Table.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="219" x="572" y="2212"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="4" language="java" name="com.holub.database.ConcreteTable.Test" project="foo" 
+  <class id="1" language="java" name="com.holub.database.ConcreteTable.UndoInsert" project="foo" 
     file="/foo/src/com/holub/database/ConcreteTable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="279" width="169" x="946" y="1178"/>    
+    <position height="117" width="131" x="332" y="816"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="com.holub.database.TableFactory" project="foo" 
+  <class id="2" language="java" name="com.holub.database.ConcreteTable.UndoDelete" project="foo" 
+    file="/foo/src/com/holub/database/ConcreteTable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="127" x="503" y="816"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.holub.database.ConcreteTable.UndoUpdate" project="foo" 
+    file="/foo/src/com/holub/database/ConcreteTable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="178" x="670" y="816"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" language="java" name="com.holub.database.Table" project="foo" 
+    file="/foo/src/com/holub/database/Table.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="459" width="228" x="1112" y="1153"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="5" language="java" name="com.holub.database.Table.Exporter" project="foo" 
+    file="/foo/src/com/holub/database/Table.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="219" x="922" y="1652"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="6" language="java" name="com.holub.database.Table.Importer" project="foo" 
+    file="/foo/src/com/holub/database/Table.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="159" x="1181" y="1652"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="7" language="java" name="com.holub.database.ConcreteTable.Undo" project="foo" 
+    file="/foo/src/com/holub/database/ConcreteTable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="103" x="670" y="1153"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="8" language="java" name="com.holub.database.ConcreteTable.Test" project="foo" 
+    file="/foo/src/com/holub/database/ConcreteTable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="169" x="1112" y="816"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="com.holub.database.ConcreteTable" project="foo" 
+    file="/foo/src/com/holub/database/ConcreteTable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="747" width="387" x="869" y="29"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="com.holub.database.TableFactory" project="foo" 
     file="/foo/src/com/holub/database/TableFactory.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="171" width="158" x="720" y="-383"/>    
+    <position height="-1" width="-1" x="1594" y="442"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="com.holub.database.CSVExporter" project="foo" 
-    file="/foo/src/com/holub/database/CSVExporter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="189" width="219" x="225" y="1713"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="7" language="java" name="com.holub.database.ConcreteTable.Results" project="foo" 
+  <class id="11" language="java" name="com.holub.database.ConcreteTable.Results" project="foo" 
     file="/foo/src/com/holub/database/ConcreteTable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="297" width="163" x="475" y="1178"/>    
+    <position height="297" width="163" x="909" y="816"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="com.holub.database.Selector.Adapter" project="foo" 
-    file="/foo/src/com/holub/database/Selector.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="154" x="268" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="9" language="java" name="com.holub.database.Database.BooleanValue" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="138" x="2120" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="com.holub.database.Database.Test" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="113" x="1753" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="11" language="java" name="com.holub.database.ConcreteTable.UndoInsert" project="foo" 
-    file="/foo/src/com/holub/database/ConcreteTable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="131" x="1176" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="12" language="java" name="com.holub.database.Table" project="foo" 
-    file="/foo/src/com/holub/database/Table.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="459" width="228" x="946" y="1713"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="13" language="java" name="com.holub.database.Database.NumericValue" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="132" x="2298" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="14" language="java" name="com.holub.database.Table.Importer" project="foo" 
-    file="/foo/src/com/holub/database/Table.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="171" width="159" x="1080" y="2212"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="15" language="java" name="com.holub.database.Database.TableMap" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="351" width="174" x="1906" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="16" language="java" name="com.holub.database.Database.StringValue" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="117" x="2470" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="17" language="java" name="com.holub.database.Selector" project="foo" 
-    file="/foo/src/com/holub/database/Selector.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="154" x="268" y="-383"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="18" language="java" name="com.holub.database.Database.AtomicExpression" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="148" x="2971" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="19" language="java" name="com.holub.database.ConcreteTable" project="foo" 
-    file="/foo/src/com/holub/database/ConcreteTable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="747" width="387" x="1176" y="-383"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="20" language="java" name="com.holub.database.Database" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="1521" width="267" x="4674" y="-383"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="21" language="java" name="com.holub.database.Database.NullValue" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="102" x="2627" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="22" language="java" name="com.holub.database.Database.MathOperator" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="103" x="4863" y="1713"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="23" language="java" name="com.holub.database.Database.Value" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="63" width="103" x="2639" y="1713"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="24" language="java" name="com.holub.database.Database.IdValue" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="141" x="2769" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="25" language="java" name="com.holub.database.Database.NotExpression" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="158" x="3417" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="26" language="java" name="com.holub.database.Database.RelationalExpression" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="336" x="3940" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="27" language="java" name="com.holub.database.JTableExporter" project="foo" 
-    file="/foo/src/com/holub/database/JTableExporter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="225" width="219" x="687" y="1713"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="28" language="java" name="com.holub.database.JTableExporter.Test" project="foo" 
-    file="/foo/src/com/holub/database/JTableExporter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="113" x="831" y="2212"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="29" language="java" name="com.holub.database.ConcreteTable.UndoDelete" project="foo" 
-    file="/foo/src/com/holub/database/ConcreteTable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="127" x="1347" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="30" language="java" name="com.holub.database.ConcreteTable.UndoUpdate" project="foo" 
-    file="/foo/src/com/holub/database/ConcreteTable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="178" x="1514" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="31" language="java" name="com.holub.database.Database.RelationalOperator" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="131" x="4692" y="1713"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="32" language="java" name="com.holub.database.ConcreteTable.Undo" project="foo" 
-    file="/foo/src/com/holub/database/ConcreteTable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="103" x="1514" y="1713"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="33" language="java" name="com.holub.database.Database.ArithmeticExpression" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="316" x="4316" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="34" language="java" name="com.holub.database.UnmodifiableTable" project="foo" 
-    file="/foo/src/com/holub/database/UnmodifiableTable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="495" width="228" x="678" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="35" language="java" name="com.holub.database.Database.LogicalExpression" project="foo" 
-    file="/foo/src/com/holub/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="264" x="3615" y="1178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="36" language="java" name="com.holub.database.CSVImporter" project="foo" 
-    file="/foo/src/com/holub/database/CSVImporter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="243" width="159" x="1214" y="1713"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="37" language="java" name="com.holub.database.Cursor" project="foo" 
-    file="/foo/src/com/holub/database/Cursor.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="225" width="163" x="484" y="1713"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <realization id="38">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="23"/>  
-  </realization>  
-  <association id="39">    
-    <bendpoint x="4809" y="1178"/>    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="40" name="MINUS"/>      
-      <multiplicity id="41" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="42">    
-    <end type="SOURCE" refId="26" navigable="false">      
-      <attribute id="43" name="right"/>      
-      <multiplicity id="44" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="45">    
-    <end type="SOURCE" refId="26" navigable="false">      
-      <attribute id="46" name="left"/>      
-      <multiplicity id="47" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="48">    
-    <bendpoint x="1145" y="1178"/>    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="12"/>  
-  </realization>  
-  <realization id="49">    
-    <end type="SOURCE" refId="29"/>    
-    <end type="TARGET" refId="32"/>  
-  </realization>  
-  <realization id="50">    
-    <end type="SOURCE" refId="34"/>    
-    <end type="TARGET" refId="12"/>  
-  </realization>  
-  <realization id="51">    
-    <end type="SOURCE" refId="30"/>    
-    <end type="TARGET" refId="32"/>  
-  </realization>  
-  <nesting id="52">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="18"/>  
-  </nesting>  
-  <nesting id="53">    
-    <bendpoint x="3909" y="1178"/>    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="2"/>  
-  </nesting>  
-  <nesting id="54">    
-    <bendpoint x="2940" y="1178"/>    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="23"/>  
-  </nesting>  
-  <association id="55">    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="56" name="left"/>      
-      <multiplicity id="57" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="58">    
-    <bendpoint x="4872" y="1178"/>    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="59" name="PLUS"/>      
-      <multiplicity id="60" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="61">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="33"/>  
-  </nesting>  
-  <realization id="62">    
-    <end type="SOURCE" refId="33"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <realization id="63">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="37"/>  
-  </realization>  
-  <association id="64">    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="65" name="right"/>      
-      <multiplicity id="66" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="67">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="29"/>  
-  </nesting>  
-  <association id="68">    
-    <bendpoint x="4683" y="1178"/>    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="69" name="GT"/>      
-      <multiplicity id="70" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="71">    
-    <end type="SOURCE" refId="25" navigable="false">      
-      <attribute id="72" name="operand"/>      
-      <multiplicity id="73" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="74">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="21"/>  
-  </nesting>  
-  <association id="75">    
-    <end type="SOURCE" refId="34" navigable="false">      
-      <attribute id="76" name="wrapped"/>      
-      <multiplicity id="77" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="78">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="8"/>  
-  </nesting>  
-  <realization id="79">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="32"/>  
-  </realization>  
-  <association id="80">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="81" name="left"/>      
-      <multiplicity id="82" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="83">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="84" name="address"/>      
-      <multiplicity id="85" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="86">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="13"/>  
-  </nesting>  
-  <association id="87">    
-    <bendpoint x="4788" y="1178"/>    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="88" name="GE"/>      
-      <multiplicity id="89" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="90">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="26"/>  
-  </nesting>  
-  <association id="91">    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="92" name="operator"/>      
-      <multiplicity id="93" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="94">    
-    <end type="SOURCE" refId="19"/>    
+  <nesting id="12">    
+    <bendpoint x="878" y="816"/>    
+    <end type="SOURCE" refId="9"/>    
     <end type="TARGET" refId="7"/>  
   </nesting>  
-  <realization id="95">    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="23"/>  
+  <nesting id="13">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </nesting>  
+  <realization id="14">    
+    <bendpoint x="1311" y="816"/>    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="4"/>  
   </realization>  
-  <association id="96">    
-    <bendpoint x="4851" y="1178"/>    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="97" name="TIMES"/>      
-      <multiplicity id="98" minimum="0" maximum="1"/>    
+  <association id="15">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="16" name="people"/>      
+      <multiplicity id="17" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <nesting id="99">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="9"/>  
+  <nesting id="18">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="3"/>  
   </nesting>  
-  <nesting id="100">    
-    <end type="SOURCE" refId="19"/>    
+  <realization id="19">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <nesting id="20">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="2"/>  
+  </nesting>  
+  <realization id="21">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <nesting id="22">    
+    <end type="SOURCE" refId="9"/>    
     <end type="TARGET" refId="11"/>  
   </nesting>  
-  <association id="101">    
-    <bendpoint x="4746" y="1178"/>    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="102" name="EQ"/>      
-      <multiplicity id="103" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="104">    
-    <end type="SOURCE" refId="26" navigable="false">      
-      <attribute id="105" name="operator"/>      
-      <multiplicity id="106" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="107">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <realization id="108">    
+  <nesting id="23">    
     <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="23"/>  
-  </realization>  
-  <nesting id="109">    
-    <end type="SOURCE" refId="27"/>    
-    <end type="TARGET" refId="28"/>  
-  </nesting>  
-  <realization id="110">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <nesting id="111">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="24"/>  
-  </nesting>  
-  <realization id="112">    
-    <end type="SOURCE" refId="35"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <association id="113">    
-    <bendpoint x="4704" y="1178"/>    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="114" name="LE"/>      
-      <multiplicity id="115" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="116">    
-    <end type="SOURCE" refId="20"/>    
     <end type="TARGET" refId="1"/>  
   </nesting>  
-  <realization id="117">    
-    <end type="SOURCE" refId="27"/>    
-    <end type="TARGET" refId="3"/>  
+  <realization id="24">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="7"/>  
   </realization>  
-  <association id="118">    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="119" name="right"/>      
-      <multiplicity id="120" minimum="0" maximum="1"/>    
+  <association id="25">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="26" name="address"/>      
+      <multiplicity id="27" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="121">    
-    <end type="SOURCE" refId="24"/>    
-    <end type="TARGET" refId="23"/>  
-  </realization>  
-  <nesting id="122">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="10"/>  
+  <nesting id="28">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
   </nesting>  
-  <nesting id="123">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="16"/>  
-  </nesting>  
-  <association id="124">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="125" name="atom"/>      
-      <multiplicity id="126" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="127">    
-    <bendpoint x="4830" y="1178"/>    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="128" name="DIVIDE"/>      
-      <multiplicity id="129" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="130">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="3"/>  
-  </nesting>  
-  <association id="131">    
-    <bendpoint x="4725" y="1178"/>    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="132" name="NE"/>      
-      <multiplicity id="133" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="134">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="23"/>  
-  </realization>  
-  <association id="135">    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="136" name="left"/>      
-      <multiplicity id="137" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="138">    
-    <end type="SOURCE" refId="36"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <realization id="139">    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <nesting id="140">    
-    <bendpoint x="1722" y="1178"/>    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="32"/>  
-  </nesting>  
-  <nesting id="141">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="25"/>  
-  </nesting>  
-  <nesting id="142">    
-    <bendpoint x="4662" y="1178"/>    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="31"/>  
-  </nesting>  
-  <realization id="143">    
-    <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <association id="144">    
-    <bendpoint x="4767" y="1178"/>    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="145" name="LT"/>      
-      <multiplicity id="146" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="147">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="148" name="right"/>      
-      <multiplicity id="149" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="150">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="151" name="people"/>      
-      <multiplicity id="152" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="153">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="35"/>  
-  </nesting>  
-  <realization id="154">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="3"/>  
-  </realization>  
-  <nesting id="155">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="4"/>  
-  </nesting>  
-  <nesting id="156">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="15"/>  
-  </nesting>  
-  <realization id="157">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="17"/>  
-  </realization>  
-  <nesting id="158">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="14"/>  
-  </nesting>  
-  <nesting id="159">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="30"/>  
-  </nesting>  
-  <nesting id="160">    
-    <bendpoint x="4893" y="1178"/>    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="22"/>  
+  <nesting id="29">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="8"/>  
   </nesting>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
