@@ -35,12 +35,12 @@ class HtmlExporterTest {
         tableBuilder.storeRow(Arrays.stream(row1).iterator());
         tableBuilder.storeRow(Arrays.stream(row2).iterator());
         tableBuilder.endTable();
-        assertEquals(writer.toString(), "<html>\n<body>\n    <table>\n        <caption>people</caption>\n        <thead>\n"
+        assertEquals("<html>\n<body>\n    <table>\n        <caption>people</caption>\n        <thead>\n"
         		+ "            <tr>\n                <th>First</th>\n                <th>Last</th>\n"
         		+ "            </tr>\n        </thead>\n        <tbody>\n            <tr>\n                <td>Fred</td>\n"
         		+ "                <td>Flintstone</td>\n            </tr>\n            <tr>\n                <td>Wilma</td>\n"
         		+ "                <td>Flintstone</td>\n            </tr>\n        </tbody>\n"
-        		+ "    </table>\n</body>\n</html>\n");
+        		+ "    </table>\n</body>\n</html>\n", writer.toString());
         writer.close();
     }
 
@@ -49,8 +49,8 @@ class HtmlExporterTest {
         Writer writer = new StringWriter();
         HtmlExporter tableBuilder = new HtmlExporter(writer);
         tableBuilder.storeRow(Arrays.stream(row1).iterator());
-        assertEquals(writer.toString(), "            <tr>\n                <td>Fred</td>\n"
-        		+ "                <td>Flintstone</td>\n            </tr>\n");
+        assertEquals("            <tr>\n                <td>Fred</td>\n"
+        		+ "                <td>Flintstone</td>\n            </tr>\n", writer.toString());
         writer.close();
     }
 
@@ -59,7 +59,7 @@ class HtmlExporterTest {
 		Writer writer = new StringWriter();
         HtmlExporter tableBuilder = new HtmlExporter(writer);
         tableBuilder.startTable();
-        assertEquals(writer.toString(), "<html>\n<body>\n    <table>\n");
+        assertEquals("<html>\n<body>\n    <table>\n", writer.toString());
         writer.close();
 	}
 
@@ -68,7 +68,7 @@ class HtmlExporterTest {
         Writer writer = new StringWriter();
         HtmlExporter tableBuilder = new HtmlExporter(writer);
         tableBuilder.endTable();
-        assertEquals(writer.toString(), "        </tbody>\n" + "    </table>\n" + "</body>\n" + "</html>\n");
+        assertEquals("        </tbody>\n" + "    </table>\n" + "</body>\n" + "</html>\n", writer.toString());
         writer.close();
     }
 
