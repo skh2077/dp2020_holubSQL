@@ -25,7 +25,7 @@ class HtmlExporterTest {
         people.insert( row2 );
     }
 
-
+ 
 	@Test
 	void testHtmlExporter() throws IOException {
         Writer writer = new StringWriter();

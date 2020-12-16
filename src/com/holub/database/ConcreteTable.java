@@ -405,13 +405,13 @@ import com.holub.tools.ArrayIterator;
 	// @select-start
 	// ----------------------------------------------------------------------
 	public Table select(Selector where) {
-		Table resultTable = new ConcreteTable(null, (String[]) columnNames.clone());
+		Table resultTable = new ConcreteTable(null, (String[]) columnNames.clone()); // this.columnNames가 전부 clone된다.
 
 		Results currentRow = (Results) rows();
 		Cursor[] envelope = new Cursor[] { currentRow };
 
 		while (currentRow.advance()) {
-			if (where.approve(envelope))
+			if (where.approve(envelope)) // where의 조건에 맞는 것들만 반환
 				resultTable.insert((Object[]) currentRow.cloneRow());
 		}
 		return new UnmodifiableTable(resultTable);
@@ -419,7 +419,7 @@ import com.holub.tools.ArrayIterator;
 
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public Table select(Selector where, String[] requestedColumns) {
-		if (requestedColumns == null)
+		if (requestedColumns == null) // join없는 Select *
 			return select(where);
 
 		Table resultTable = new ConcreteTable(null, (String[]) requestedColumns.clone());
@@ -447,7 +447,7 @@ import com.holub.tools.ArrayIterator;
 		// If we're not doing a join, use the more efficient version
 		// of select().
 
-		if (otherTables == null || otherTables.length == 0)
+		if (otherTables == null || otherTables.length == 0) // 'join없는' select * from address;들이 빠지는 데
 			return select(where, requestedColumns);
 
 		// Make the current table not be a special case by effectively
@@ -466,7 +466,7 @@ import com.holub.tools.ArrayIterator;
 		// Recursively compute the Cartesian product, adding to the
 		// resultTable all rows that the Selector approves
 
-		selectFromCartesianProduct(0, where, requestedColumns, allTables, envelope, resultTable);
+		selectFromCartesianProduct(0, where, requestedColumns, allTables, envelope, resultTable); // 'join'시 requestedColumns에 *하나 있음
 
 		return new UnmodifiableTable(resultTable);
 	}
@@ -556,11 +556,11 @@ import com.holub.tools.ArrayIterator;
 		String[] columnNames = null;
 		Table[] otherTables = null;
 
-		if (requestedColumns != null) // SELECT *
+		if (requestedColumns != null) 
 		{
 			// Can't cast an Object[] to a String[], so make a copy to ensure
 			// type safety.
-
+			//System.out.print(requestedColumns.size()); // *일 경우 requestedColumns는 null이 됨.
 			columnNames = new String[requestedColumns.size()];
 			int i = 0;
 			Iterator column = requestedColumns.iterator();
@@ -568,14 +568,14 @@ import com.holub.tools.ArrayIterator;
 			while (column.hasNext())
 				columnNames[i++] = column.next().toString();
 		}
-		else {
-			columnNames = this.columnNames.clone(); // clone all of table column
+		else { // *이 들어와서 requestedColumns가 null일 경우 테이블의 모든 칼럼들을 현재 칼럼으로 설정
+			columnNames = this.columnNames.clone(); // clone all of the table column
 		}
 
 		if (other != null)
 			otherTables = (Table[]) other.toArray(new Table[other.size()]);
 
-		return select(where, columnNames, otherTables);
+		return select(where, columnNames, otherTables); // Selector, String, Table
 	}
 
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

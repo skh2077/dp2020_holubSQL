@@ -227,7 +227,7 @@ public class Console
 		{
 //			databaseName = JOptionPane.showInputDialog(
 //					  "Enter database directory (e.g. c:/tmp/foo)\n"
-//					+ "Directory must exist." );
+//					+ "Directory must exist." ); 
 			databaseName = "C://dp2020"; //fix route
 			if( databaseName == null )
 				System.exit(1);

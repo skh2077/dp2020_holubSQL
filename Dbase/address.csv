@@ -1,4 +1,14 @@
 address
 addrId,	street,	city,	state,	zip
-0,	12 MyStreet,	Berkeley,	CA,	99998
-1,	34 Quarry Ln.,	Bedrock,	AZ,	00000
+0,	12 MyStreet,	Berkeley,	CA,	99999
+1,	34 Quarry Ln.,	Bedrock,	XX,	00000
+0,	12 MyStreet,	Berkeley,	CA,	99999
+1,	34 Quarry Ln.,	Bedrock,	XX,	00000
+0,	12 MyStreet,	Berkeley,	CA,	99999
+1,	34 Quarry Ln.,	Bedrock,	XX,	00000
+0,	12 MyStreet,	Berkeley,	CA,	99999
+1,	34 Quarry Ln.,	Bedrock,	XX,	00000
+0,	12 MyStreet,	Berkeley,	CA,	99999
+1,	34 Quarry Ln.,	Bedrock,	XX,	00000
+0,	12 MyStreet,	Berkeley,	CA,	99999
+1,	34 Quarry Ln.,	Bedrock,	XX,	00000

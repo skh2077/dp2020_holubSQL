@@ -20,7 +20,7 @@ enum Type {
 
 public class HtmlExporter implements Table.Exporter{
     private final Writer out;
-    private int width;
+    private int width; 
 
     public HtmlExporter( Writer out ) { 
         this.out = out;
